@@ -20,7 +20,7 @@ export default function App() {
       <div className="coder">
         Coded by
         <a
-          href="https://github.com/Tajvan/weather-react-app"
+          href="https://github.com/Tajvan/React"
           target="_blank"
           rel="noreferrer"
         >
