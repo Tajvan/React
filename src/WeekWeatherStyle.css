@@ -1,0 +1,47 @@
+.weekWeather {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  display: inline-block;
+  top: -333px;
+  left: 448px;
+  bottom: 0;
+  width: 350px;
+  height: 547px;
+  z-index: 3;
+}
+
+table {
+  position: relative;
+  top: 55px;
+  left: 55px;
+  width: 260px;
+  line-height: 10px;
+  text-align: left;
+}
+
+img {
+  max-width: 30px;
+  margin-top: 5px;
+}
+td span {
+  text-align: right;
+}
+
+hr {
+  border: 2px solid whitesmoke;
+  opacity: 0.25;
+  margin: 5px 0 10px 0;
+}
+.weekday {
+  font-weight: 300;
+  font-size: 20px;
+}
+.daytemp {
+  font-weight: 500;
+  font-size: 20px;
+}
