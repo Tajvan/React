@@ -7,12 +7,12 @@ import WeekWeather from "./WeekWeather";
 export default function App() {
   return (
     <div className="boarder">
-      <form id="searchbutton">
-        <input type="text" id="search-input" placeholder="Search" />
+      <form>
+        <input type="text" placeholder="Search" />
       </form>
       <Time />
-      <button className="gpsButton" id="gps-input">
-        <i class="fa-solid fa-location-dot gps"></i>
+      <button className="gpsButton">
+        <i className="fa-solid fa-location-dot gps"></i>
       </button>
       <CurrentWeather />
       <AdditionalInformation />

@@ -5,7 +5,7 @@ import "./WeekWeatherStyle.css";
 export default function WeekWeather() {
   return (
     <div className="weekWeather">
-      <table className="weeksValue" id="week-weather">
+      <table className="weeksValue" >
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
