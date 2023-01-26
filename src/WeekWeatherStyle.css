@@ -7,7 +7,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   display: inline-block;
-  top: -355px;
+  top: -327px;
   left: 448px;
   bottom: 0;
   width: 350px;
@@ -30,6 +30,7 @@ img {
 }
 td span {
   text-align: right;
+  font-weight: 400;
 }
 
 hr {
@@ -38,10 +39,12 @@ hr {
   margin: 5px 0 10px 0;
 }
 .weekday {
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 20px;
 }
 .daytemp {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }

@@ -12,6 +12,7 @@
   background-size: cover;
 }
 .boarder input {
+  font-family: "Montserrat", sans-serif;
   border-radius: 40px;
   padding: 10px 10px;
   position: relative;
@@ -22,16 +23,19 @@
   font-weight: 400;
 }
 
-.time {
-  display: inline;
+.time h4 {
+  font-family: "Montserrat", sans-serif;
   position: relative;
-  left: 42px;
-  top: -15px;
+  font-weight: 500;
+  left: 40px;
+  top: -30px;
+  line-height: 0;
   color: whitesmoke;
 }
 
 #today-day,
 #today-time {
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 10px;
   color: whitesmoke;
@@ -54,12 +58,13 @@
 .unitsCelsia,
 .unitsFarenheit,
 .stick {
+  font-family: "Montserrat", sans-serif;
   position: relative;
   display: inline;
-  top: 270px;
+  top: 240px;
   font-size: 65px;
   font-weight: bolder;
-  left: 10px;
+  left: 40px;
   color: whitesmoke;
   margin: 0;
   padding: 0;
@@ -69,10 +74,10 @@
 .unitsFarenheit,
 .stick {
   font-size: 10px;
-  top: 240px;
+  top: 200px;
   font-weight: 400;
   text-decoration: none;
-  left: 16px;
+  left: 40px;
 }
 
 .unitsCelsia:hover,
@@ -82,34 +87,38 @@
 }
 
 .weathername {
+  font-family: "Montserrat", sans-serif;
   color: whitesmoke;
   position: relative;
-  font-size: 14px;
-  top: 270px;
-  font-weight: 400;
-  left: -20px;
-  text-transform: capitalize;
+  font-size: 15px;
+  top: 240px;
+  font-weight: 300;
+  left: 20px;
 }
 
 h1 {
   position: relative;
-  top: 270px;
-  left: 36px;
+  top: 250px;
+  left: 40px;
   font-size: 30px;
   font-weight: 300;
   margin: 0;
   padding: 0;
   color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
 }
 
 li {
   list-style: none;
+  font-family: "Montserrat", sans-serif;
 }
 .additionalinformation {
+  font-size: 16px;
+  font-weight: 300;
   position: relative;
   display: inline;
-  left: 265px;
-  top: 145px;
+  left: 260px;
+  top: 115px;
   color: whitesmoke;
 }
 .windValue,
@@ -124,6 +133,7 @@ li {
   padding-left: 15px;
 }
 .coder {
+  font-family: "Montserrat", sans-serif;
   position: relative;
   left: 320px;
   top: -280px;
