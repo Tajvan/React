@@ -9,8 +9,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>
-            {" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>
@@ -23,7 +22,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>{" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>
@@ -36,7 +35,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>{" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>
@@ -49,7 +48,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>{" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>
@@ -62,7 +61,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>{" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>
@@ -75,7 +74,7 @@ export default function WeekWeather() {
         <tr>
           <th className="weekday">Monday</th>
           <td className="daytemp">
-            <span className="min-temp">-8</span>{" "}-{" "}
+            <span className="min-temp">-8</span> -{" "}
             <span className="max-temp">-4</span>
           </td>
         </tr>

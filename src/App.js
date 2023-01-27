@@ -1,5 +1,4 @@
 import "./App.css";
-import Time from "./Time";
 import CurrentWeather from "./CurrentWeather";
 import WeekWeather from "./WeekWeather";
 import Input from "./Input";
@@ -8,7 +7,7 @@ export default function App() {
   return (
     <div className="boarder">
       <Input />
-      <Time />
+
       <button className="gpsButton">
         <i className="fa-solid fa-location-dot gps"></i>
       </button>
