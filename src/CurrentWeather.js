@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Time from "./Time";
 import axios from "axios";
+import Weatherinfo from "./WeatherInfo";
 
-export default function CurrentWeather() {
-  const [ready, setReady] = useState(false);
+export default function CurrentWeather(props) {
   const [weatherDate, setweatherDate] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function showWeather(response) {
     console.log(response);
@@ -18,50 +19,43 @@ export default function CurrentWeather() {
       city: response.data.city,
       date: new Date(response.data.time * 1000),
     });
-    setReady(true);
   }
 
-  if (ready) {
+  function Search() {
+    let key = "12ct3aa05c4b0c7ae44f804a0oe4060d";
+    let units = "metric";
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=${units}`;
+    axios.get(url).then(showWeather);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    Search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  if (weatherDate.ready) {
     return (
       <div>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Search" onChange={handleCityChange} />
+        </form>
+        <div>
+          <Weatherinfo data={weatherDate} />
+        </div>
         <div>
           <div>
-            <Time date={weatherDate.date}/>
+            <Time date={weatherDate.date} />
           </div>
-        </div>
-        <div>
-          <h4 className="temperature">{Math.round(weatherDate.temperature)}</h4>
-          <span className="unitsCelsia">°C</span>
-          <span className="stick">|</span>
-          <span className="unitsFarenheit">°F</span>
-          <span className="weathername">{weatherDate.description}</span>
-          <h1>{weatherDate.city}</h1>
-        </div>
-        <div className="additionalinformation">
-          <p>
-            <li className="wind">
-              Wind <span class="windValue">{weatherDate.wind}</span>
-              <span>m/s</span>
-            </li>
-            <li className="pressure">
-              Pressure <span class="pressureValue">{weatherDate.presure}</span>
-              <span>hPa</span>
-            </li>
-            <li className="humidity">
-              Humidity{" "}
-              <span className="humidityValue">{weatherDate.humidity}</span>
-              <span>%</span>
-            </li>
-          </p>
         </div>
       </div>
     );
   } else {
-    let key = "12ct3aa05c4b0c7ae44f804a0oe4060d";
-    let units = "metric";
-    let url = `https://api.shecodes.io/weather/v1/current?query=Kyiv&key=${key}&units=${units}`;
-    axios.get(url).then(showWeather);
-
+    Search();
     return "Loading";
   }
 }
+ 

@@ -1,10 +1,16 @@
-import React from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
 export default function Input() {
+  const [city, setCity] = useState(" ");
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  function handleCitychange(event) {
+    setCity(event.value);
+  }
+
   return (
-    <form>
-      <input type="text" placeholder="Search" />
-    </form>
+   
   );
 }
