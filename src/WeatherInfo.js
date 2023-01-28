@@ -1,13 +1,13 @@
 import React from "react";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weatherinfo(props) {
   return (
     <div>
       <div>
-        <h4 className="temperature">{Math.round(props.data.temperature)}</h4>
-        <span className="unitsCelsia">°C</span>
-        <span className="stick">|</span>
-        <span className="unitsFarenheit">°F</span>
+       
+        <WeatherTemperature celsius={props.data.temperature} />
+
         <span className="weathername">{props.data.description}</span>
         <h1>{props.data.city}</h1>
       </div>
