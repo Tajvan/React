@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Time from "./Time";
 import axios from "axios";
 import Weatherinfo from "./WeatherInfo";
+import WeekWeather from "./WeekWeather";
 
 export default function CurrentWeather(props) {
   const [weatherDate, setweatherDate] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function showWeather(response) {
-    console.log(response);
     setweatherDate({
       ready: true,
       temperature: response.data.temperature.current,
@@ -18,6 +18,7 @@ export default function CurrentWeather(props) {
       wind: response.data.wind.speed,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
+      coordinate: response.data.coordinates,
     });
   }
 
@@ -50,6 +51,9 @@ export default function CurrentWeather(props) {
           <div>
             <Time date={weatherDate.date} />
           </div>
+          <div>
+            <WeekWeather coords={weatherDate.coordinate} />
+          </div>
         </div>
       </div>
     );
@@ -58,4 +62,3 @@ export default function CurrentWeather(props) {
     return "Loading";
   }
 }
- 

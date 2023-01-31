@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 import "./WeekWeatherStyle.css";
 
-export default function WeekWeather() {
+export default function WeekWeather(props) {
+  let key = "f3009e4852fa0a079dab291dabf020c4";
+  let lat = props.coords.latitude;
+  let lon = props.coords.longitude;
+  let units = "metric";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
+  axios.get(url).then(SearchWeekWeather);
+
+  function SearchWeekWeather(response) {}
+
   return (
     <div className="weekWeather">
       <table className="weeksValue">
@@ -88,3 +98,6 @@ export default function WeekWeather() {
     </div>
   );
 }
+
+//lat: response.data.coordinates.latitude
+//lon: response.data.coordinates.longitude

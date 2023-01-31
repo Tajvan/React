@@ -1,6 +1,5 @@
 import "./App.css";
 import CurrentWeather from "./CurrentWeather";
-import WeekWeather from "./WeekWeather";
 
 export default function App() {
   return (
@@ -9,7 +8,7 @@ export default function App() {
         <i className="fa-solid fa-location-dot gps"></i>
       </button>
       <CurrentWeather defaultCity="Kyiv" />
-      <WeekWeather />
+
       <div className="coder">
         Coded by
         <a
