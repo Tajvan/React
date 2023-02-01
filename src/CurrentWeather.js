@@ -40,18 +40,18 @@ export default function CurrentWeather(props) {
 
   if (weatherDate.ready) {
     return (
-      <div>
+      <div className="/">
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Search" onChange={handleCityChange} />
         </form>
-        <div>
+        <div className="/">
           <Weatherinfo data={weatherDate} />
         </div>
-        <div>
-          <div>
+        <div className="/">
+          <div className="/">
             <Time date={weatherDate.date} />
           </div>
-          <div>
+          <div className="/">
             <WeekWeather coords={weatherDate.coordinate} />
           </div>
         </div>
