@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeekWeatherStyle.css";
@@ -6,6 +6,11 @@ import "./WeekWeatherStyle.css";
 export default function WeekWeather(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+
+    setLoaded(false);
+  }, [props.coords]);
 
   function SearchWeekWeather(response) {
     setForecast(response.data.daily);
@@ -15,7 +20,16 @@ export default function WeekWeather(props) {
   if (loaded) {
     return (
       <div className="weekWeather">
-        <WeatherForecastDay data={forecast[0]} />
+        <table className="weeksValue">
+          <tbody>
+            <WeatherForecastDay data={forecast[0]} />
+            <WeatherForecastDay data={forecast[1]} />
+            <WeatherForecastDay data={forecast[2]} />
+            <WeatherForecastDay data={forecast[3]} />
+            <WeatherForecastDay data={forecast[4]} />
+            <WeatherForecastDay data={forecast[5]} />
+          </tbody>
+        </table>
       </div>
     );
   } else {

@@ -29,7 +29,7 @@ export default function WeatherTemperature(props) {
     let F = (props.celsius * 9) / 5 + 32;
     return (
       <span>
-        <h4 className="temperature">{Math.round(props.celsius)}</h4>
+        <h4 className="temperature">{Math.round(F)}</h4>
         <span>
           <a href="/" className="unitsCelsia" onClick={toCelsius}>
             °C

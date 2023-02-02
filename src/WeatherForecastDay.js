@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeekWeatherStyle.css";
+import Icon from "./Icon";
 
 export default function WeatherForecastDay(props) {
   function max() {
@@ -30,22 +31,20 @@ export default function WeatherForecastDay(props) {
   }
 
   return (
-    <div>
-      <table className="weeksValue">
-        <tr>
-          <th className="weekday">{day()}</th>
-          <td className="daytemp">
-            <span className="min-temp">{min()}</span> -{" "}
-            <span className="max-temp">{max()}</span>
-          </td>
-        </tr>
-        <tr>
-          <th className="imgholder">
-            <img src="/" alt="" />
-            <hr />
-          </th>
-        </tr>
-      </table>
-    </div>
+    <span>
+      <tr>
+        <th className="weekday">{day()}</th>
+        <td className="daytemp">
+          <span className="min-temp">{min()}</span> -{" "}
+          <span className="max-temp">{max()}</span>
+        </td>
+      </tr>
+      <tr>
+        <th className="imgholder">
+          <Icon code={props.data.weather[0].icon} />
+          <hr />
+        </th>
+      </tr>
+    </span>
   );
 }
